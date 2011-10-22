@@ -10,9 +10,12 @@ Installation
 Follow these steps:
 
     git clone git://github.com/JoshuaEstes/Office-Merit-Badges.git /var/www/officemerits
-    cd /var/www/officemerits
-    git submodule update --init --recursive
     sudo ln -s /var/www/officemerits/config/vhost.conf /etc/apache/sites-enabled/officemerits.conf
     sudo sh -c "echo '127.0.0.1 officemerits.local' >> /etc/hosts"
+    cd /var/www/officemerits
+    git submodule update --init --recursive
+    php symfony configure:database "mysql:host=127.0.0.1;dbname=officemerits" DBUSERNAME DBPASSWORD
+    php symfony doctrine:create-db
+    php symfony doctrine:build --all-classes --and-migrate --and-load
 
 Now point your browser to http://officemerits.local
