@@ -17,5 +17,6 @@ Follow these steps:
     php symfony configure:database "mysql:host=127.0.0.1;dbname=officemerits" DBUSERNAME DBPASSWORD
     php symfony doctrine:create-db
     php symfony doctrine:build --all-classes --and-migrate --and-load
+    php symfony plugin:publish-assets
 
 Now point your browser to http://officemerits.local

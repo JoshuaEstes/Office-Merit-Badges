@@ -9,6 +9,19 @@
     <?php include_javascripts() ?>
   </head>
   <body>
+    <div>
+      <ul>
+        <li><?php echo link_to_unless(($sf_request->getParameter('module') == 'default') && ($sf_request->getParameter('action') == 'index'),'Home','@homepage') ?></li>
+        <li><?php echo link_to('View Users','@sf_guard_profile') ?></li>
+        <?php if ($sf_user->isAuthenticated()): ?>
+        <li><?php echo link_to('Edit Profile','sf_guard_profile_edit',$sf_user->getGuardUser()) ?></li>
+        <li><?php echo link_to('Signout','@sf_guard_signout') ?></li>
+        <?php else: ?>
+        <li><?php echo link_to('Register','@sf_guard_register') ?></li>
+        <li><?php echo link_to('Signin','@sf_guard_signin') ?></li>
+        <?php endif; ?>
+      </ul>
+    </div>
     <?php echo $sf_content ?>
   </body>
 </html>

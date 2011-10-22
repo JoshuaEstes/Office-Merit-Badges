@@ -1,0 +1,15 @@
+Badge:
+  actAs:
+    Timestampable: ~
+    Blameable: ~
+    Sluggable: ~
+  column:
+    icon:
+      type: text
+      length: 255
+    title:
+      type: text
+      length: 255
+      notnull: true
+    description:
+      type: clob
