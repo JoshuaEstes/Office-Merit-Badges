@@ -1,0 +1,18 @@
+Office Merit Badges
+===================
+
+Inter office application that allows office dwellers to sign up, add badges, and
+assign badges to other office dwellers.
+
+Installation
+------------
+
+Follow these steps:
+
+    git clone git://github.com/JoshuaEstes/Office-Merit-Badges.git /var/www/officemerits
+    cd /var/www/officemerits
+    git submodule update --init --recursive
+    sudo ln -s /var/www/officemerits/config/vhost.conf /etc/apache/sites-enabled/officemerits.conf
+    sudo sh -c "echo '127.0.0.1 officemerits.local' >> /etc/hosts"
+
+Now point your browser to http://officemerits.local
