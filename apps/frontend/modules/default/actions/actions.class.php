@@ -30,4 +30,13 @@ class defaultActions extends sfActions
 
   }
 
+  /**
+   * Module disabled
+   *
+   */
+  public function executeDisabled()
+  {
+
+  }
+
 }
