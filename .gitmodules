@@ -4,3 +4,6 @@
 [submodule "plugins/sfDoctrineGuardPlugin"]
 	path = plugins/sfDoctrineGuardPlugin
 	url = git://github.com/JoshuaEstes/sfDoctrineGuardPlugin.git
+[submodule "plugins/sfDoctrineExtraPlugin"]
+	path = plugins/sfDoctrineExtraPlugin
+	url = git://github.com/JoshuaEstes/sfDoctrineExtraPlugin.git
